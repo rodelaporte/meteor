@@ -1,8 +1,16 @@
 <body>
-	{{> book}}
+	{{> list}}
 </body>
 
-<template name="book">
-	<h1>{{title}}</h1>
-	<p>{{author}}</p>
+<template name="list">
+	<input type="text" id="text">
+	<ul>
+	{{#each items}}
+		{{> items}}
+	{{/each}}
+	</ul>
+</template>
+
+<template name="items">
+	<li>{{this}}</li>
 </template>
