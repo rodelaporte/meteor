@@ -1,0 +1,17 @@
+<head>
+  <title>people list</title>
+</head>
+
+<body>
+  <title>people list</title>
+  {{> person}}
+</body>
+
+<template name="people">
+    <h2>{{ firstname }} </h2>
+  <ul>
+  {{#each likes}}
+  <li{{ this }}</li>
+  {{/each}}
+  </ul>
+</template>
