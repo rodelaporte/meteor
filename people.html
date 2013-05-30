@@ -1,16 +1,18 @@
+<head>
+	<title>People List</title>
+</head>
+
 <body>
-	{{> list}}
+	<h1>People List</h1>
+	{{> person}}
 </body>
 
-<template name="list">
-	<input type="text" id="text">
+<template name="person">
+	<h2>{{fullName}}</h2>
+	<p>{{job}}</p>
 	<ul>
-	{{#each items}}
-		{{> items}}
-	{{/each}}
+		{{#each likes}}
+		<li>{{this}}</li>
+		{{/each}}
 	</ul>
-</template>
-
-<template name="items">
-	<li>{{this}}</li>
 </template>
