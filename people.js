@@ -1,5 +1,13 @@
 if (Meteor.isClient) {
-    Template.person.fullName = "Joe Smith";
-    Template.person.job = "Developer";
-    Template.person.likes = ["Bananas", "javascript", "Cars"]
+
+    Template.staff.people = [
+      {fullName: "John Doe", job: "CEO"},
+      {fullName: "Jane Smith", job: "CTO"},
+      {fullName: "Sophie Turner", job: "Developer"},
+      {fullName: "Jack Lewis", job: "Designer"}
+    ]
+
+    Template.person.executive = function () {
+      return !!this.job.match(/^C.*O$/);
+    }
 }
